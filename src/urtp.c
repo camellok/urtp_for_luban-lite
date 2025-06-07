@@ -6,5 +6,7 @@
  * Author: Luo Silin (luosilin@gzzyxtek.com). 
  */
 
+ #include "urtp_conf.h"
  #include "urtp.h"
+
  

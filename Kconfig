@@ -1,0 +1,27 @@
+menuconfig LPKG_USING_URTP
+    bool "URTP: a universal protocol built upon the USB CDC protocol, specifically designed for the efficient transmission of large volumes of data."
+    default n
+    depends on LPKG_USING_CHERRYUSB
+
+if LPKG_USING_URTP
+
+    menuconfig LPKG_URTP_USING_DEMO
+        bool
+        prompt "Use urtp demo"
+        default n
+
+    if LPKG_URTP_USING_DEMO
+        choice
+            prompt "select URTP demo"
+            default LPKG_URTP_USING_FILE_TRANSFER_DEMO
+            depends on LPKG_URTP_USING_DEMO
+
+            config LPKG_URTP_USING_FILE_TRANSFER_DEMO
+                bool "An example of transmitting files using the URTP protocol."
+
+            config LPKG_URTP_USING_DATA_TRANSFER_DEMO
+                bool "An example of trans  2mitting data using the URTP protocol."
+        endchoice
+    endif
+
+endif

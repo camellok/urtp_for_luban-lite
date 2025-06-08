@@ -20,7 +20,7 @@ if LPKG_USING_URTP
                 bool "An example of transmitting files using the URTP protocol."
 
             config LPKG_URTP_USING_DATA_TRANSFER_DEMO
-                bool "An example of trans  2mitting data using the URTP protocol."
+                bool "An example of transmitting data using the URTP protocol."
         endchoice
     endif
 
